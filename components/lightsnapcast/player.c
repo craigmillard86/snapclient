@@ -783,7 +783,7 @@ esp_err_t my_gptimer_start(gptimer_handle_t timer) {
 }
 
 static void tg0_timer_deinit(void) {
-  //	timer_deinit(TIMER_GROUP_1, TIMER_1);
+  //  timer_deinit(TIMER_GROUP_1, TIMER_1);
   if (gptimer) {
     ESP_ERROR_CHECK(my_gptimer_stop(gptimer));
     ESP_ERROR_CHECK(gptimer_del_timer(gptimer));
@@ -1673,7 +1673,7 @@ static void player_task(void *pvParameters) {
 
               // #if USE_SAMPLE_INSERTION
               //               if (dir_insert_sample < 0) {
-              //         	  tmpSize -= sampleSizeInBytes;
+              //            tmpSize -= sampleSizeInBytes;
               //               }
               // #endif
 
@@ -1888,15 +1888,15 @@ static void player_task(void *pvParameters) {
           //         age, shortMedian, miniMedian,
           //         uxQueueMessagesWaiting(pcmChkQHdl));
           // ESP_LOGI( TAG, "8b f %d b %d",
-          // 		   heap_caps_get_free_size(MALLOC_CAP_8BIT |
-          //           						   MALLOC_CAP_INTERNAL),
+          //       heap_caps_get_free_size(MALLOC_CAP_8BIT |
+          //                         MALLOC_CAP_INTERNAL),
           //           heap_caps_get_largest_free_block(MALLOC_CAP_8BIT |
           //                                            MALLOC_CAP_INTERNAL));
           // ESP_LOGI( TAG, "32b f %d b %d",
           //           heap_caps_get_free_size(MALLOC_CAP_32BIT |
           //                                   MALLOC_CAP_EXEC),
           //           heap_caps_get_largest_free_block(MALLOC_CAP_32BIT |
-          //		 MALLOC_CAP_EXEC));
+          //     MALLOC_CAP_EXEC));
         } else {
           // ESP_LOGW(TAG, "couldn't get server now");
 
@@ -1944,8 +1944,6 @@ static void player_task(void *pvParameters) {
   vQueueDelete(snapcastSettingQueueHandle);
   snapcastSettingQueueHandle = NULL;
   xSemaphoreGive(snapcastSettingsMux);
-
-
 
   ret = destroy_pcm_queue(&pcmChkQHdl);
 
